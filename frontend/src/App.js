@@ -1,12 +1,14 @@
 //import Clock from './components/clock'
 //import Example from './components/exampleClass'
 //import Example from './components/exampleFunction'
-import Form from './components/form'
+//import Form from './components/form'
+import Calculator from "./components/calcuiator"
 
 function App() {
-  console.log("app render was called")
   return (
-    <div><Form /></div>
+    <div>
+      <Calculator/>
+    </div>
   );
 }
 
