@@ -1,24 +1,17 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
+import {Button} from '@material-ui/core'
 
+export default function ButtonFunction(props) {
+    const {locale,change} = props;
+    
+    useEffect(() =>{
+          console.log("This was Called")
+    },[locale])
 
-class Button extends React.Component {
-    shouldComponentUpdate(nextProps){
-        const {change : nextChange, locale : nextLocale} = nextProps;
-        const {change : currentChange, locale: currentLocale} = this.props;
-        if ( nextChange === currentChange && nextLocale === currentLocale ) {
-            return false ;
+    return (
+        <Button onClick = {()=>change(locale)} variant = 'contained' color = 'secondary'>{
+            locale === 'en-us' ? 'Change Language' : 'ভাষা পরিবর্তন করুন'
         }
-        else return true ;
-    }
-    render() {
-        console.log("Button render was called")
-        const {change,locale} = this.props;
-        return (
-            <button onClick = {()=>change(locale)}>{
-                locale === 'en-us' ? 'Change Language' : 'ভাষা পরিবর্তন করুন'
-            }</button>
-        );
-    }
+        </Button>
+    );
 }
-
-export default Button
