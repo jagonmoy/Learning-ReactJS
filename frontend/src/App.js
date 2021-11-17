@@ -1,13 +1,10 @@
-//import Clock from './components/clock'
-//import Example from './components/exampleClass'
-//import Example from './components/exampleFunction'
-//import Form from './components/form'
-import Calculator from "./components/calcuiator"
-
+import FirstLayer from "./components/Context/firstLayer";
 function App() {
+
   return (
     <div>
-      <Calculator/>
+       <h1>This is First Layer</h1>
+       <FirstLayer/>
     </div>
   );
 }

@@ -8,8 +8,8 @@ export default function Calculator(){
     const [fahrenheit,setFarenhite] = useState('');
     
     const temparatureChange = (e,scale) => {
-        setTCelsius(( scale === 'fahrenheit') ? ((parseFloat(e.target.value) - 32) * 5/9).toString() : e.target.value)
-        setFarenhite(( scale === 'celsius')? ((parseFloat(e.target.value)*9/5)+32).toString() : e.target.value)
+         setTCelsius((scale === 'fahrenheit') ? ((parseFloat(e.target.value) - 32) * 5/9).toString() : e.target.value)
+         setFarenhite((scale === 'celsius')? ((parseFloat(e.target.value)*9/5)+32).toString() : e.target.value)
     }
     
 
